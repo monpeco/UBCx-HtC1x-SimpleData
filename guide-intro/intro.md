@@ -20,3 +20,13 @@
 > (extract "the country out of the boy")
 "boy"
 "cou"
+
+
+##1.3 Creating Executables
+
+#lang racket
+ 
+(define (extract str)
+  (substring str 4 7))
+ 
+(extract "the cat out of the bag")
