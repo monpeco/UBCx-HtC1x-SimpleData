@@ -1,4 +1,4 @@
-#Beginning Student Language
+#Beginning Student Language (BSL)
 
 This page provides an overview of the material for the first module of the course including topics, learning goals, estimate of time required and study tips. Each module of the course will start with a similar page which you can always access from the navigation bar to the left.
 
