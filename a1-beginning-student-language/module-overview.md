@@ -18,3 +18,28 @@ Working through the videos and practice materials for this module should take ap
 * Be able to write out the step-by-step evaluation of simple expressions including function calls.
 * Be able to use the stepper to automatically step through the evaluation of an expression.
 * Be able to use the Dr Racket help desk to discover new primitives.
+
+
+--
+
+#Expressions, pt 1
+This is a expression
+(+ 3 4)
+>5
+
+And produces a result
+
+To form a Expression:
+(<primitive> <expression> ...)
+
+A single value es considered a expression
+<value>
+
+Comments
+;(+ 3 4)
+
+Other expression
+(sqr 3)
+
+(sqrt 16)
+
