@@ -43,3 +43,19 @@ Other expression
 
 (sqrt 16)
 
+--
+
+#Evaluation, pt 2
+
+(+ 2 (* 3 4) (- (+ 1 2)))
+
+The operation is call 'call to a primitive'
+to evaluate a primitive call:
+- first reduce operands to values
+- then apply primitive to values
+
+The evaluation is made with this two rules:
+* Left to rigth
+* From inside to outside
+
+--
