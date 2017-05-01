@@ -59,3 +59,16 @@ The evaluation is made with this two rules:
 * From inside to outside
 
 --
+
+#Strings and Images, pt 1
+
+A string looks like this:
+"apple"
+
+A operation with strings:
+(string-append "Ada" " " "Lovelace")
+
+(string-length "apple")
+
+(substring "Caribou" 2 4)
+
