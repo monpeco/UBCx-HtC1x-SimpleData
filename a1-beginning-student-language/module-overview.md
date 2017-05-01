@@ -72,3 +72,24 @@ A operation with strings:
 
 (substring "Caribou" 2 4)
 
+
+
+--
+
+#Strings and Images, pt 2
+
+```
+(require 2htdp/image)
+
+(circle 10 "solid" "red")
+
+(rectangle 30 60 "outline" "blue")
+
+(text "hello" 20 "orange")
+```
+
+above produces an image with all its arguments stacked up and lined up on their horizontal centers
+
+(above (circle 10 "solid" "red")
+		(circle 20 "solid" "yellow")
+		(circle 30 "solid" "green"))
