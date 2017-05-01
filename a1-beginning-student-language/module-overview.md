@@ -90,6 +90,42 @@ A operation with strings:
 
 above produces an image with all its arguments stacked up and lined up on their horizontal centers
 
+```
 (above (circle 10 "solid" "red")
 		(circle 20 "solid" "yellow")
 		(circle 30 "solid" "green"))
+```
+
+```
+(beside (circle 10 "solid" "red")
+		(circle 20 "solid" "yellow")
+		(circle 30 "solid" "green"))
+```
+
+```
+(overlay (circle 10 "solid" "red")
+		(circle 20 "solid" "yellow")
+		(circle 30 "solid" "green"))
+```
+		
+beside makes the same but at a side and overlay put on top each image.
+
+--
+
+Question 3
+```
+(overlay (text "STOP" 48 "white") 
+         (regular-polygon 60 8 "solid" "red"))
+```
+
+```		 
+(beside (square 20 "outline" "blue")
+        (above (circle 15 "solid" "red")
+               (triangle 20 "solid" "green")))		
+```
+
+--
+
+Constant Definitions, pt 1
+
+			   
