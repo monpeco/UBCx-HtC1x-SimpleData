@@ -3,6 +3,16 @@
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname image-above) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 (require 2htdp/image)
 
-(above (circle 10 "solid" "red")
+;(above (circle 10 "solid" "red")
+;		(circle 20 "solid" "yellow")
+;		(circle 30 "solid" "green"))
+
+
+;(beside (circle 10 "solid" "red")
+;		(circle 20 "solid" "yellow")
+;		(circle 30 "solid" "green"))
+
+
+(overlay (circle 10 "solid" "red")
 		(circle 20 "solid" "yellow")
 		(circle 30 "solid" "green"))
