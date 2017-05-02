@@ -128,4 +128,33 @@ Question 3
 
 Constant Definitions, pt 1
 
-			   
+```
+(define WIDTH 400)
+(define HEIGHT 600)
+
+(* WIDTH HEIGHT)
+```
+
+To form a constant definition:
+
+```
+(define <name> <expression>)
+```
+
+sequence of characters including: 
+`a..z`, `A..Z`, `0..9`, `! @ $ % _ + - = ? < >]`
+
+```
+;http://www.ccs.neu.edu/home/matthias/HtDP2e/part_one.html
+(define CAT )
+(define RCAT (rotate -10 CAT))
+(define LCAT (rotate 10 CAT))
+
+RCAT
+LCAT
+```
+
+--
+
+Function Definitions, pt. 1
+
