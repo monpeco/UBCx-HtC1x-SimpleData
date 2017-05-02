@@ -173,3 +173,30 @@ Function Definitions, pt. 1
        (bulb "green"))
 ```
 
+--
+
+Function Definitions, pt. 2
+
+To form a function definition:
+
+```
+(define (<name> <parameter> ...)
+	<expression>)
+```
+
+```
+(define (bulb c)
+	circle 40 "solid" c)
+```
+
+To form a function call expression:
+
+```
+(<name-of-defined-function> <expresion>) ; this expression migth be an operands
+```
+
+```
+(bulb (string-append "re" "d")) 
+```
+
+
