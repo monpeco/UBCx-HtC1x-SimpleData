@@ -158,3 +158,18 @@ LCAT
 
 Function Definitions, pt. 1
 
+```
+(above (circle 40 "solid" "red")         
+       (circle 40 "solid" "yellow")
+       (circle 40 "solid" "green"))
+```
+
+```
+(define (bulb c)
+  (circle 40 "solid" c))
+
+(above (bulb "red")
+       (bulb "yellow")
+       (bulb "green"))
+```
+
