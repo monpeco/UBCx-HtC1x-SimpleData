@@ -227,3 +227,11 @@ Differents booleans operations
    (image-width I2))
 ```
 
+To form an if expression:
+
+```
+(if <expression>	;question (must produce a boolean)
+	<expression>	;true aswer
+	<expression>)	;false answer
+```
+
