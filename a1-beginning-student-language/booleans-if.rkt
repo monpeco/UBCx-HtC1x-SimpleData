@@ -21,7 +21,12 @@
 ;(< (image-width I1)
 ;   (image-width I2))
 
+;(if (< (image-width I1)
+;       (image-height I1))
+;     "tall"
+;     "wide")
+
 (if (< (image-width I1)
        (image-height I1))
-     "tall"
-     "wide")
+     (image-width I1)
+     (image-height I1))

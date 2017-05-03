@@ -227,6 +227,8 @@ Differents booleans operations
    (image-width I2))
 ```
 
+Booleans and if Expressions, pt 2
+
 To form an if expression:
 
 ```
@@ -234,4 +236,26 @@ To form an if expression:
 	<expression>	;true aswer
 	<expression>)	;false answer
 ```
+
+
+```
+(define I1 (rectangle 10 20 "solid" "red"))
+(define I2 (rectangle 20 20 "solid" "blue"))
+
+(if (< (image-width I1)
+       (image-height I1))
+     "tall"
+     "wide")
+```
+
+Booleans and if Expressions, pt 3
+
+To evaluate an if expression:
+* If the question expression is not a value, evaluate it and replace with value
+* If the question is true, replace entire if expression with true answer expression
+* If the question is false replace entire if expression with false answer expression
+* The question is a value other than true or false, so produce an error.
+
+
+
 
