@@ -199,4 +199,31 @@ To form a function call expression:
 (bulb (string-append "re" "d")) 
 ```
 
+--
+
+Booleans and if Expressions, pt 1
+
+There are two values:
+```
+;true
+;false
+```
+Differents booleans operations
+```
+(define HEIGHT 100)
+(define WIDTH 100)
+
+(> HEIGHT WIDTH)
+(>= HEIGHT WIDTH)
+
+(string=? "foo" "bar")
+(string=? "foo" "foo")
+```
+```
+(define I1 (rectangle 10 20 "solid" "red"))
+(define I2 (rectangle 20 20 "solid" "blue"))
+
+(< (image-width I1)
+   (image-width I2))
+```
 
