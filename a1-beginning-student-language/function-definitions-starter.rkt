@@ -15,3 +15,5 @@
 (above (bulb "red")
        (bulb "yellow")
        (bulb "green"))
+
+(bulb (string-append "re" "d")) 
