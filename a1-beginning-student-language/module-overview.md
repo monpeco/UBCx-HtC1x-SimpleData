@@ -257,5 +257,18 @@ To evaluate an if expression:
 * The question is a value other than true or false, so produce an error.
 
 
+Booleans and if Expressions, pt 4
+
+To form a expression
+
+```
+(and <expresion1> <expresion2> ...)
+```
+Where all <expresioni> must produce a Booleans
+
+To evaluate and expression:
+Evalutate <expresioni> one at a time:
+* if an <expresioni> produces false, immediately produce false.
+* if all <expresioni> produces true, the produce true.
 
 
