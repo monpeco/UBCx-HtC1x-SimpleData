@@ -275,3 +275,17 @@ Evalutate <expresioni> one at a time:
 
 Using the Stepper
 
+--
+
+Discovering Primitives, pt 1
+
+Two major techniques for discovering primitives:
+
+ 1. Lucky guess.
+ 2. Search and Scroll
+
+```
+(radial-star 8 8 64 "solid" "darkslategray")
+
+(radial-star 32 30 40 "outline" "black")
+```
