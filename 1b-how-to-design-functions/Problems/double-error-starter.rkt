@@ -5289,7 +5289,7 @@
 0 0 24 29 1 #"\n"
 0 0 17 3 19 #";; Number -> Number"
 0 0 24 29 1 #"\n"
-0 0 17 3 30 #";; Return two times the number"
+0 0 17 3 12 #";; Doubles n"
 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
 0 0 14 3 12 #"check-expect"
