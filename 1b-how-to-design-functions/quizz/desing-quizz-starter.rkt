@@ -34,3 +34,6 @@
 ;(define (image-larger img1 img2)        ;(template)
 ;  (... img1 img2))
 
+(define (image-larger img1 img2)        ;(function body)
+  (> (* (image-height img1) (image-width img1) )
+     (* (image-height img2) (image-width img2) )))
