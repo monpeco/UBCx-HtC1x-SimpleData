@@ -14,16 +14,16 @@
 ;;Code the function body.
 ;;Test and debug until correct
 
-(check-expect (image-larger (rectangle 0 0 "solid" "red")                   ;(examples)
+(check-expect (image-larger? (rectangle 0 0 "solid" "red")                   ;(examples)
                             (rectangle 0 0 "solid" "red") ) false)
 
-(check-expect (image-larger (rectangle 10 10 "solid" "red")
+(check-expect (image-larger? (rectangle 10 10 "solid" "red")
                             (rectangle 10 10 "solid" "red") ) false)
 
-(check-expect (image-larger (rectangle 20 20 "solid" "red")
+(check-expect (image-larger? (rectangle 20 20 "solid" "red")
                             (rectangle 10 10 "solid" "red") ) true)
 
-(check-expect (image-larger (rectangle 20 10 "solid" "red")
+(check-expect (image-larger? (rectangle 20 10 "solid" "red")
                             (rectangle 10 20 "solid" "red") ) false)
 
 ;;Image Image -> Boolean                                        (signature)
@@ -34,6 +34,6 @@
 ;(define (image-larger img1 img2)        ;(template)
 ;  (... img1 img2))
 
-(define (image-larger img1 img2)        ;(function body)
+(define (image-larger? img1 img2)        ;(function body)
   (> (* (image-height img1) (image-width img1) )
      (* (image-height img2) (image-width img2) )))
