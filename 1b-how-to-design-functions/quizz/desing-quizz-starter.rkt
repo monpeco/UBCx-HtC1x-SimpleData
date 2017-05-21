@@ -9,11 +9,9 @@
 (check-expect (image-larger? (rectangle 10 10 "solid" "red") (rectangle 20 20 "solid" "red") ) false)  ;(examples)
 (check-expect (image-larger? (rectangle 20 10 "solid" "red") (rectangle 20 20 "solid" "red") ) false)
 (check-expect (image-larger? (rectangle 30 10 "solid" "red") (rectangle 20 20 "solid" "red") ) false)
-
 (check-expect (image-larger? (rectangle 10 20 "solid" "red") (rectangle 20 20 "solid" "red") ) false)
 (check-expect (image-larger? (rectangle 20 20 "solid" "red") (rectangle 20 20 "solid" "red") ) false)
 (check-expect (image-larger? (rectangle 30 20 "solid" "red") (rectangle 20 20 "solid" "red") ) false)
-
 (check-expect (image-larger? (rectangle 10 30 "solid" "red") (rectangle 20 20 "solid" "red") ) false)
 (check-expect (image-larger? (rectangle 20 30 "solid" "red") (rectangle 20 20 "solid" "red") ) false)
 (check-expect (image-larger? (rectangle 30 30 "solid" "red") (rectangle 20 20 "solid" "red") ) true)
