@@ -54,3 +54,18 @@ Introduction
 "smaller"
 
 ```
+#Key words:
+* Problem domain
+* Data definition
+
+#First version of the next-color method
+
+```
+
+;; Part of a traffic simulation
+
+(define (next-color c)
+   (cond [(= c 0) 2]
+         [(= c 1) 0]
+		 [(= c 2) 1]))
+```
