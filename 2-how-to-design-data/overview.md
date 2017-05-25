@@ -23,3 +23,34 @@ Introduction
         [(= (image-height img) (image-width img) ) "tall"]
         [else "wide"]))
 ```
+
+#Rule of evaluation
+```
+1
+(cond [(> 1 2 ) "bigger"]
+      [(= 1 2 ) "equal"]
+      [(< 1 2 ) "smaller"])
+
+2
+(cond [false "bigger"]
+      [(= 1 2 ) "equal"]
+      [(< 1 2 ) "smaller"])
+
+3
+(cond [(= 1 2 ) "equal"]
+      [(< 1 2 ) "smaller"])
+
+3
+(cond [false "equal"]
+      [(< 1 2 ) "smaller"])
+
+4
+(cond [(< 1 2 ) "smaller"])
+
+5
+(cond [true "smaller"])
+
+6
+"smaller"
+
+```
