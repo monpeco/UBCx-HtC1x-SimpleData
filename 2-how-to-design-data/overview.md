@@ -112,3 +112,13 @@ Third version
 		 [(= c 2) 1]))
 
 ```
+
+##How To Design Data (HTDD)
+
+* A possible structure definition (not until compound data)
+* A type comment that defines a new type name and describes how to form data of that type.
+* An interpretation that describes the correspondence between information and data.
+* One or more examples of the data.
+* A template for a 1 argument function operating on data of this type.
+
+
