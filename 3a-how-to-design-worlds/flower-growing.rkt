@@ -3,7 +3,7 @@
 #reader(lib "htdp-beginner-reader.ss" "lang")((modname flower-growing) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 (require 2htdp/image)
 (require 2htdp/universe)
-
+;; =================
 ;; Constants
 (define HEIGHT 400)
 (define WIDTH 600)
@@ -26,7 +26,7 @@
 (define FLOWER (above PETALS-U PETALS-C PETALS-B))
 
 
-
+;; =================
 ;; Data definition
 
 (define-struct fs (x y size))
@@ -45,3 +45,32 @@
 ;;  - compound: 3 fields
 
 
+;; =================
+;; Functions:
+
+;; FlowerState -> FlowerState
+;; run the animation, starting with initial flower state fs.
+;; Start with (main (make-fs 0 0))
+;; <no tests for main functions>
+(define (main fs)
+  (big-bang fs                      ; FlowerState
+            (on-tick   next-fs)     ; FlowerState -> FlowerState
+            (to-draw   render-fs)   ; FlowerState -> Image
+            (on-mouse  init-fs)))   ; FlowerState Integer Integer MouseEvent -> FlowerState
+
+;; FlowerState -> FlowerState
+;; Increase the size of the flower by 0.1 rate
+
+(define (next-fs fs) fs);Stub
+
+
+;; FlowerState -> Image
+;; Produces the fs image at x and y position and a size rate scale
+
+(define (render-fs fs) fs);Stub
+
+
+;; FlowerState -> FlowerState
+;; Initializes the flower in a x and y position, and with a 1 scale
+
+(define (init-fs fs) fs);Stub
