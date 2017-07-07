@@ -27,4 +27,21 @@
 
 
 
+;; Data definition
+
+(define-struct fs (x y size))
+;; FlowerState is (make-fs Natural[0,WIDTH] Natural[0,HEIGHT] Number)
+;; interp. a flower state is the x and y position of the flower, and the size at a given moment
+
+(define FS2 (make-fs 20 0 0.5))
+(define FS1 (make-fs 6 10 1.1))
+
+#;
+(define (fn-for-fs fs)
+  (... (fs-x b)     ;Natural[0,WIDTH]
+       (fs-y b)     ;Natural[0,HEIGHT]
+       (fs-size b)))   ;Number
+;; Template rules used:
+;;  - compound: 3 fields
+
 
