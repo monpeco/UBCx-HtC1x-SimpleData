@@ -83,5 +83,8 @@
 
 ;; FlowerState -> FlowerState
 ;; Initializes the flower in a x and y position, and with a 1 scale
-
-(define (init-fs fs) fs);Stub
+(check-expect (init-fs (make-fs 0 0 0) 5 5 "button-down") (make-fs 0 0 1))
+;(define (init-fs f x y me) f);Stub
+(define (init-fs f x y me)
+  (cond [(mouse=? me "button-down") (make-fs   0   0 1.0)]
+        [else f]))
