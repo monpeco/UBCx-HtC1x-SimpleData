@@ -38,9 +38,9 @@
 
 #;
 (define (fn-for-fs fs)
-  (... (fs-x b)     ;Natural[0,WIDTH]
-       (fs-y b)     ;Natural[0,HEIGHT]
-       (fs-size b)))   ;Number
+  (... (fs-x fs)     ;Natural[0,WIDTH]
+       (fs-y fs)     ;Natural[0,HEIGHT]
+       (fs-size fs)))   ;Number
 ;; Template rules used:
 ;;  - compound: 3 fields
 
@@ -60,9 +60,14 @@
 
 ;; FlowerState -> FlowerState
 ;; Increase the size of the flower by 0.1 rate
-
-(define (next-fs fs) fs);Stub
-
+(check-expect (next-fs (make-fs 0 0 5.0)) (make-fs 0 0 5.1))
+(check-expect (next-fs (make-fs 20 30 19.0)) (make-fs 20 30 19.1))
+(check-expect (next-fs (make-fs 30 40 49.0)) (make-fs 30 40 49.1))
+;(define (next-fs fs) fs);Stub
+(define (next-fs fs)
+  (make-fs (fs-x fs)
+           (fs-y fs)
+           (+ (fs-size fs) 0.1)))
 
 ;; FlowerState -> Image
 ;; Produces the fs image at x and y position and a size rate scale
