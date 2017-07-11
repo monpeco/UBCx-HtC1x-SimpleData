@@ -38,8 +38,8 @@
 
 #;
 (define (fn-for-fs fs)
-  (... (fs-x fs)     ;Natural[0,WIDTH]
-       (fs-y fs)     ;Natural[0,HEIGHT]
+  (... (fs-x fs)        ;Natural[0,WIDTH]
+       (fs-y fs)        ;Natural[0,HEIGHT]
        (fs-size fs)))   ;Number
 ;; Template rules used:
 ;;  - compound: 3 fields
@@ -71,9 +71,15 @@
 
 ;; FlowerState -> Image
 ;; Produces the fs image at x and y position and a size rate scale
-
-(define (render-fs fs) fs);Stub
-
+(check-expect (render-fs (make-fs   0   0 1.0)) (place-image FLOWER 0 0 MTS))
+(check-expect (render-fs (make-fs 100 200 2.0)) (place-image (scale 2.0 FLOWER) 100 200 MTS))
+(check-expect (render-fs (make-fs 300  40 5.0)) (place-image (scale 5.0 FLOWER) 300  40 MTS))
+;(define (render-fs fs) (place-image FLOWER 0 0 MTS));Stub
+(define (render-fs fs)
+  (place-image (scale (fs-size fs) FLOWER)
+               (fs-x fs)
+               (fs-y fs)
+               MTS))
 
 ;; FlowerState -> FlowerState
 ;; Initializes the flower in a x and y position, and with a 1 scale
