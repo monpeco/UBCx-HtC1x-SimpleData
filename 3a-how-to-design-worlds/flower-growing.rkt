@@ -50,7 +50,7 @@
 
 ;; FlowerState -> FlowerState
 ;; run the animation, starting with initial flower state fs.
-;; Start with (main (make-fs 0 0))
+;; Start with (main (make-fs 1 1 1.0))
 ;; <no tests for main functions>
 (define (main fs)
   (big-bang fs                      ; FlowerState
@@ -83,8 +83,8 @@
 
 ;; FlowerState -> FlowerState
 ;; Initializes the flower in a x and y position, and with a 1 scale
-(check-expect (init-fs (make-fs 0 0 0) 5 5 "button-down") (make-fs 0 0 1))
+(check-expect (init-fs (make-fs 0 0 0) 5 5 "button-down") (make-fs 5 5 0.1))
 ;(define (init-fs f x y me) f);Stub
-(define (init-fs f x y me)
-  (cond [(mouse=? me "button-down") (make-fs   0   0 1.0)]
-        [else f]))
+(define (init-fs fs x y me)
+  (cond [(mouse=? me "button-down") (make-fs x y 0.1)]
+        [else fs]))
