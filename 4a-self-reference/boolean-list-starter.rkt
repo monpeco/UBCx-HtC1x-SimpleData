@@ -5095,7 +5095,7 @@
 0 0 -1 -1 2 1 #"\0"
 0 -1 1 #"\0"
 1.0 0 -1 92 -1 93 -1 -1 0 1 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 255 38 39 0
-0 0 -1 -1           0 226 0 4 3 85
+0 0 -1 -1           0 234 0 4 3 85
 (
  #";; The first three lines of this file were inserted by DrRacket. The"
  #"y record metadata"
@@ -5242,6 +5242,16 @@
 0 0 24 3 6 #")))]))"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
+0 0 17 3 23 #";; Template rules used:"
+0 0 24 29 1 #"\n"
+0 0 17 3 21 #";;  - one of: 2 cases"
+0 0 24 29 1 #"\n"
+0 0 17 3 28 #";;  - atomic distinct: empty"
+0 0 24 29 1 #"\n"
+0 0 17 3 44 #";;  - compound: (cons Boolean ListOfBoolean)"
+0 0 24 29 1 #"\n"
+0 0 17 3 49 #";;  - self-reference: (rest lob) is ListOfBoolean"
+0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
 0 0 17 3 20 #";; ================="
 0 0 24 29 1 #"\n"
@@ -5329,7 +5339,7 @@
 0 0 24 29 1 #"\n"
 0           0 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
-0 0 17 3 33 #";; ListOfBoolean -> ListOfBoolean"
+0 0 17 3 27 #";; ListOfBoolean -> Boolean"
 0 0 24 29 1 #"\n"
 0 0 17 3 82
 (
@@ -5395,10 +5405,8 @@
 0 0 24 29 1 #"\n"
 0 0 17 3 2 #";("
 0 0 17 3 6 #"define"
-0 0 17 3 12 #" (all-true? "
-0 0 17 3 3 #"LOB"
-0 0 17 3 2 #") "
-0 0 17 3 5 #"true)"
+0 0 17 3 17 #" (all-true? lob) "
+0 0 17 3 7 #"true)  "
 0 0 17 3 5 #";stub"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
