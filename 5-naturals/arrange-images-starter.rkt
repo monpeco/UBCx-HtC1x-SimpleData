@@ -3025,7 +3025,7 @@
 0 -1 -1 0 1 #"\0"
 0 75 17 #"DejaVu Sans Mono\0"
 0.0 10 90 -1 90 -1 3 -1 0 1 0 1 0 0 0.0 0.0 0.0 0.0 0.0 0.0 0 0 0 255
-255 255 1 -1           0 283 0 4 3 85
+255 255 1 -1           0 282 0 4 3 85
 (
  #";; The first three lines of this file were inserted by DrRacket. The"
  #"y record metadata"
@@ -3356,15 +3356,14 @@
 0 0 17 3 59
 #";; lay out images left to rigth in increasing order of size"
 0 0 24 29 1 #"\n"
-0 0 24 3 1 #"("
-0 0 14 3 12 #"check-expect"
-0 0 24 3 2 #" ("
-0 0 14 3 14 #"arrange-images"
-0 0 24 3 1 #" "
-0 0 14 3 5 #"empty"
-0 0 24 3 2 #") "
-0 0 14 3 5 #"BLANK"
-0 0 24 3 1 #")"
+0 0 17 3 3 #"; ("
+0 0 17 3 12 #"check-expect"
+0 0 17 3 2 #" ("
+0 0 17 3 14 #"arrange-images"
+0 0 17 3 1 #" "
+0 0 17 3 5 #"empty"
+0 0 17 3 2 #") "
+0 0 17 3 53 #"BLANK)  ; in function composition dont test base case"
 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
 0 0 14 3 12 #"check-expect"
