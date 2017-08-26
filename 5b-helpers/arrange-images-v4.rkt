@@ -2011,7 +2011,7 @@
 255 1 -1 2 1 #"\0"
 0 -1 1 #"\0"
 1.0 0 -1 -1 -1 -1 -1 -1 0 0 0 0 0 0 0.0 0.0 0.0 1.0 1.0 1.0 0 128 255 0
-0 0 -1 -1           0 633 0 4 3 85
+0 0 -1 -1           0 629 0 4 3 85
 (
  #";; The first three lines of this file were inserted by DrRacket. The"
  #"y record metadata"
@@ -2705,9 +2705,9 @@
 0 0 17 3 35 #";; Image ListOfImage -> ListOfImage"
 0 0 24 29 1 #"\n"
 0 0 17 3 66
-#";; insert img in proper place in lst (in increasing order of size)"
+#";; insert img in proper place in loi (in increasing order of size)"
 0 0 24 29 1 #"\n"
-0 0 17 3 32 #";; ASSUME: lst is already sorted"
+0 0 17 3 32 #";; ASSUME: loi is already sorted"
 0 0 24 29 1 #"\n"
 0 0 24 3 1 #"("
 0 0 14 3 12 #"check-expect"
@@ -2822,16 +2822,12 @@
 0 0 24 3 4 #"))))"
 0 0 24 29 1 #"\n"
 0 0 24 29 1 #"\n"
-0 0 24 3 1 #"("
-0 0 15 3 6 #"define"
-0 0 24 3 2 #" ("
-0 0 14 3 6 #"insert"
-0 0 24 3 1 #" "
-0 0 14 3 3 #"img"
-0 0 24 3 1 #" "
-0 0 14 3 3 #"lst"
-0 0 24 3 2 #") "
-0 0 14 3 3 #"lst"
-0 0 24 3 1 #")"
+0 0 17 3 2 #";("
+0 0 17 3 6 #"define"
+0 0 17 3 2 #" ("
+0 0 17 3 6 #"insert"
+0 0 17 3 1 #" "
+0 0 17 3 3 #"img"
+0 0 17 3 10 #" loi) loi)"
 0 0 24 29 1 #"\n"
 0           0
