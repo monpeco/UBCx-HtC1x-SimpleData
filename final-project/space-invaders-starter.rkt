@@ -112,7 +112,7 @@
 
 ;; Game -> Game
 ;; Run the world with the (listof Invader) (listof Missile) Tank
-;; Start with: (main (make-game empty empty (make-tank 50 1))
+;; Start with: (main (make-game empty empty (make-tank 50 1)))
 (define (main g)
   (big-bang g                         ; Game
             (on-tick   next-tock)     ; Game -> Game
@@ -121,11 +121,12 @@
 
 ;; Game -> Game
 ;; Produce the next stage of the game
+(check-expect (next-tock (make-game (list I1) (list M1) T1)) (make-game (list I1) (list M1) T1))
 (define (next-tock g) g) ;stub
 
 ;; Game -> Image
 ;; Produce the game image with the tank, invaders and missils fired
-(define (render g) (place-image MTS))  ;stub
+(define (render g) (place-image TANK 100 100 MTS))  ;stub
 
 ;; Template from KeyEvent
 ;; Fire the missil from the current position of the tank
