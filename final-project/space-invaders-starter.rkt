@@ -1,6 +1,6 @@
 ;; The first three lines of this file were inserted by DrRacket. They record metadata
 ;; about the language level of this file in a form that our tools can easily process.
-#reader(lib "htdp-beginner-abbr-reader.ss" "lang")((modname space-invaders-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f ())))
+#reader(lib "htdp-beginner-abbr-reader.ss" "lang")((modname space-invaders-starter) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
 (require 2htdp/universe)
 (require 2htdp/image)
 
@@ -11,6 +11,8 @@
 
 (define WIDTH  300)
 (define HEIGHT 500)
+
+(define MTS (empty-scene HEIGHT WIDTH "white"))
 
 (define INVADER-X-SPEED 1.5)  ;speeds (not velocities) in pixels per tick
 (define INVADER-Y-SPEED 1.5)
@@ -107,3 +109,24 @@
 (define G2 (make-game (list I1) (list M1) T1))
 (define G3 (make-game (list I1 I2) (list M1 M2) T1))
 
+
+;; Game -> Game
+;; Run the world with the (listof Invader) (listof Missile) Tank
+;; Start with: (main (make-game empty empty (make-tank 50 1))
+(define (main g)
+  (big-bang g                         ; Game
+            (on-tick   next-tock)     ; Game -> Game
+            (to-draw   render)        ; Game -> Image
+            (on-key    fire)))        ; Game KeyEvent -> Game
+
+;; Game -> Game
+;; Produce the next stage of the game
+(define (next-tock g) g) ;stub
+
+;; Game -> Image
+;; Produce the game image with the tank, invaders and missils fired
+(define (render g) (place-image MTS))  ;stub
+
+;; Template from KeyEvent
+;; Fire the missil from the current position of the tank
+(define (fire g key) g) ;stub
