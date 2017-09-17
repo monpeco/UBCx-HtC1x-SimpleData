@@ -90,6 +90,15 @@
   (... (invader-x invader) (invader-y invader) (invader-dx invader)))
 
 
+;; ListOfInvader is one of:
+;;  - empty
+;;  - (cons Number ListOfInvader)
+;; interp. each invader in the list a invader on screen
+(define LOI1 empty)
+(define LOI2 (cons I1 empty))
+(define LOI3 (cons I1 (cons I2 (cons I3 empty))))
+
+
 (define-struct missile (x y))
 ;; Missile is (make-missile Number Number)
 ;; interp. the missile's location is x y in screen coordinates
@@ -123,6 +132,8 @@
 ;; Produce the next stage of the game
 (check-expect (next-tock (make-game (list I1) (list M1) T1)) (make-game (list I1) (list M1) T1))
 (define (next-tock g) g) ;stub
+
+;; 
 
 ;; Game -> Image
 ;; Produce the game image with the tank, invaders and missils fired
