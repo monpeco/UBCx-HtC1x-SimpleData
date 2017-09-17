@@ -133,7 +133,17 @@
 (check-expect (next-tock (make-game (list I1) (list M1) T1)) (make-game (list I1) (list M1) T1))
 (define (next-tock g) g) ;stub
 
-;; 
+;; ListOfInvader -> ListOfInvader
+;; Add randomly an invader to the list of invaders
+(check-expect (add-invader I1) (add-invader I1))
+(define (add-invader li) li); stub
+
+
+;; ListOfInvader -> ListOfInvader
+;; Add randomly an invader to the list of invaders
+(check-expect (add-invader I1) (add-invader I1))
+(define (add-invader li) li); stub
+
 
 ;; Game -> Image
 ;; Produce the game image with the tank, invaders and missils fired
