@@ -83,7 +83,7 @@
 (define I1 (make-invader 150 100 12))           ;not landed, moving right
 (define I2 (make-invader 150 HEIGHT -10))       ;exactly landed, moving left
 (define I3 (make-invader 150 (+ HEIGHT 10) 10)) ;> landed, moving right
-(define I4 (make-invader 150 (+ HEIGHT 10) 10)) ;> landed, moving right
+(define I4 (make-invader 150 (+ HEIGHT 20) 10)) ;> landed, moving right
 
 
 #;
@@ -149,7 +149,12 @@
 
 ;; Game -> Image
 ;; Produce the game image with the tank, invaders and missils fired
-(define (render g) (place-image TANK 100 100 MTS))  ;stub
+;(define (render g) (place-image TANK 100 100 MTS))  ;stub
+(define (render g)
+  (place-image (scale (fs-size g) FLOWER)
+               (fs-x g)
+               (fs-y g)
+               MTS))
 
 ;; Template from KeyEvent
 ;; Fire the missil from the current position of the tank
