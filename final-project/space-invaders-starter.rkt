@@ -83,6 +83,7 @@
 (define I1 (make-invader 150 100 12))           ;not landed, moving right
 (define I2 (make-invader 150 HEIGHT -10))       ;exactly landed, moving left
 (define I3 (make-invader 150 (+ HEIGHT 10) 10)) ;> landed, moving right
+(define I4 (make-invader 150 (+ HEIGHT 10) 10)) ;> landed, moving right
 
 
 #;
@@ -97,6 +98,7 @@
 (define LOI1 empty)
 (define LOI2 (cons I1 empty))
 (define LOI3 (cons I1 (cons I2 (cons I3 empty))))
+(define LOI4 (cons I1 (cons I2 (cons I3 (cons I4 empty)))))
 
 
 (define-struct missile (x y))
@@ -135,14 +137,14 @@
 
 ;; ListOfInvader -> ListOfInvader
 ;; Add randomly an invader to the list of invaders
-(check-expect (add-invader I1) (add-invader I1))
-(define (add-invader li) li); stub
-
-
-;; ListOfInvader -> ListOfInvader
-;; Add randomly an invader to the list of invaders
-(check-expect (add-invader I1) (add-invader I1))
-(define (add-invader li) li); stub
+(check-expect (add-invader LOI2) (add-invader LOI2))
+;(define (add-invader li) li); stub
+(define (add-invader loi) 
+  (cond [(empty? loi) empty]
+        [else
+         (if (= (modulo (length loi) 4) 0) 
+             (cons I1 loi)
+             loi)]))
 
 
 ;; Game -> Image
