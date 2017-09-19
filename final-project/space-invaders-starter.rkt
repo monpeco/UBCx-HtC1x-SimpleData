@@ -12,7 +12,7 @@
 (define WIDTH  300)
 (define HEIGHT 500)
 
-(define MTS (empty-scene HEIGHT WIDTH "white"))
+(define MTS (empty-scene 300 500))
 
 (define INVADER-X-SPEED 1.5)  ;speeds (not velocities) in pixels per tick
 (define INVADER-Y-SPEED 1.5)
@@ -151,16 +151,14 @@
 ;; Produce the game image with the tank, invaders and missils fired
 ;(define (render g) (place-image TANK 100 100 MTS))  ;stub
 (define (render g)
-  (above  (place-image INVADER
+  (overlay  (place-image INVADER
                        (invader-x (first (game-invaders g)))
                        (invader-y (first (game-invaders g)))
                        MTS)
           (place-image TANK
                        (tank-x (game-t g))
                        TANK-HEIGHT/2
-                       MTS)
-                   
-          ))
+                       MTS)))
 
 ;; Template from KeyEvent
 ;; Fire the missil from the current position of the tank
