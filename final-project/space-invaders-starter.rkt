@@ -151,14 +151,14 @@
 ;; Produce the game image with the tank, invaders and missils fired
 ;(define (render g) (place-image TANK 100 100 MTS))  ;stub
 (define (render g)
-  (overlay  (place-image INVADER
-                       (invader-x (first (game-invaders g)))
-                       (invader-y (first (game-invaders g)))
-                       MTS)
+  (beside  (place-image INVADER
+                       TANK-HEIGHT/2
+                       TANK-HEIGHT/2
+                       (rectangle 148 148 "solid" "gray"))
           (place-image TANK
                        (tank-x (game-t g))
                        TANK-HEIGHT/2
-                       MTS)))
+                       (rectangle 148 148 "solid" "gray")))) ;stub2
 
 ;; Template from KeyEvent
 ;; Fire the missil from the current position of the tank
