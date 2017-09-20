@@ -123,7 +123,7 @@
 
 ;; Game -> Game
 ;; Run the world with the (listof Invader) (listof Missile) Tank
-;; Start with: (main (make-game empty empty (make-tank 50 1)))
+;; Start with: (main (make-game (list I1) empty (make-tank 50 1)))
 (define (main g)
   (big-bang g                         ; Game
             (on-tick   next-tock)     ; Game -> Game
